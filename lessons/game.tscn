@@ -23,8 +23,8 @@ z_index = 1
 position = Vector2(1367, 460)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("4_sepuf")]
-position = Vector2(2799, 730)
+position = Vector2(2790, 706)
 
 [node name="Circuit" parent="." instance=ExtResource("5_sepuf")]
 y_sort_enabled = true
-position = Vector2(1927, 1379)
+position = Vector2(1927, 1348)
