@@ -17,7 +17,6 @@ script = ExtResource("1_48faf")
 [node name="Runner" parent="." instance=ExtResource("1_yasw7")]
 unique_name_in_owner = true
 z_index = 1
-y_sort_enabled = true
 position = Vector2(1817, 561)
 
 [node name="FinishLine" parent="." instance=ExtResource("3_cpqg5")]
