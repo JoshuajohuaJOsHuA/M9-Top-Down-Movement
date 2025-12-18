@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://p75euy1gcr34" path="res://lessons/runner.tscn" id="1_yasw7"]
 [ext_resource type="PackedScene" uid="uid://xl56q8amb611" path="res://assets/finish_line/finish_line.tscn" id="3_cpqg5"]
 [ext_resource type="PackedScene" uid="uid://budpgxkjtmw1f" path="res://lessons/bouncer.tscn" id="4_8c4bg"]
-[ext_resource type="PackedScene" uid="uid://berjmpj7l0ubr" path="res://lessons/simple_obstacle.tscn" id="4_sepuf"]
+[ext_resource type="PackedScene" uid="uid://berjmpj7l0ubr" path="res://lessons/Obstacle.tscn" id="4_sepuf"]
 [ext_resource type="PackedScene" uid="uid://ctfrkukdhiywq" path="res://lessons/circuit.tscn" id="5_sepuf"]
 [ext_resource type="Theme" uid="uid://cdcyvsn1fp8wa" path="res://assets/countdown/count_down_theme.tres" id="7_viysf"]
 [ext_resource type="Script" uid="uid://57e8080cpukf" path="res://assets/countdown/count_down.gd" id="8_tpjcj"]
@@ -14,16 +14,6 @@
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_48faf")
-
-[node name="CircuitBackground" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(1928, 1345)
-texture = ExtResource("1_gkp25")
-
-[node name="FinishLine" parent="." instance=ExtResource("3_cpqg5")]
-unique_name_in_owner = true
-position = Vector2(519, 1122)
-area_width = 384
 
 [node name="Runner" parent="." instance=ExtResource("1_yasw7")]
 unique_name_in_owner = true
@@ -34,12 +24,22 @@ position = Vector2(1817, 561)
 unique_name_in_owner = true
 position = Vector2(1372, 569)
 
+[node name="FinishLine" parent="." instance=ExtResource("3_cpqg5")]
+unique_name_in_owner = true
+position = Vector2(519, 1122)
+area_width = 384
+
 [node name="SimpleObstacle" parent="." instance=ExtResource("4_sepuf")]
 z_index = 1
 position = Vector2(2381, 1556)
 
 [node name="SimpleObstacle2" parent="." instance=ExtResource("4_sepuf")]
 position = Vector2(2790, 706)
+
+[node name="CircuitBackground" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1928, 1345)
+texture = ExtResource("1_gkp25")
 
 [node name="Circuit" parent="." instance=ExtResource("5_sepuf")]
 y_sort_enabled = true
